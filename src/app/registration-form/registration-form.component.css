@@ -1,0 +1,133 @@
+.registration-container {
+  display: flex;
+  position: relative;
+}
+
+.avatar-section {
+  width: 20%;
+  padding: 20px;
+}
+
+.avatar-image {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.upload-button {
+  display: block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.photo-section {
+  width: 20%;
+  padding-right: 60px;
+  margin-top: 30px;
+}
+
+.form-section {
+  width: 40%;
+  padding: 60px;
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; 
+}
+
+.form-content {
+  width: 80%; /* Adjust the width as needed */
+  max-width: 400px
+}
+
+.input-group {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+input[type="range"] {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.tags {
+  margin-bottom: 10px;
+}
+
+.tag {
+  background: #000000;
+  color: white;
+  padding: 5px;
+  margin-right: 5px;
+}
+
+.tag .close {
+  cursor: pointer;
+}
+
+.button-group {
+  padding: 10px 20px;
+  margin-right: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.button-group:hover {
+  background: #0056b3;
+}
+
+#ageValue {
+  display: inline-block;
+  margin-left: 10px;
+  color: #000000;
+}
+
+.center-content {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+.close-button {
+  position: absolute;
+  top: 10px; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */
+  padding: 5px 10px;
+  background-color: #ff0000;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+/* Ensure the placeholder text is visible */
+/* Hide the default arrow */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  
+  padding-right: 1em; /* Add space for custom arrow */
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>'); /* Use a custom arrow */
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+

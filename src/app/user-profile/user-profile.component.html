@@ -1,0 +1,30 @@
+<div class="user-profile-container black-text">
+    <h2>User Profile</h2>
+    <div *ngIf="formData" class="profile-wrapper">
+        <div class="profile-left">
+            <div class="avatar-section">
+                <!-- Add border to the image -->
+                <img [src]="formData.photo" alt="Avatar" class="avatar-image bordered">
+            </div>
+            <div class="buttons">
+                <!-- Edit Profile button -->
+                <button mat-button class="edit-profile-button">Edit Profile</button>
+                <!-- Edit Photo button -->
+                <button mat-button class="edit-photo-button">Edit Photo</button>
+            </div>
+        </div>
+        <div class="profile-right">
+            <div class="user-details">
+                <p>I'm {{ formData.firstName }} {{ formData.lastName }} and I'm above {{ formData.age }} years old.</p>
+                <p>You can send your emails to <a href="mailto:{{ formData.email }}">{{ formData.email }}</a>.</p>
+                <p>I live in the state of {{ formData.state }}.</p>
+                <p *ngIf="formData.tags && formData.tags.length">My interests:</p>
+                <ul *ngIf="formData.tags && formData.tags.length">
+                    <li *ngFor="let tag of formData.tags">{{ tag }}</li>
+                </ul>
+                <p>Please send me newsletters.</p>
+                <p>Please reach out to me on my phone number: {{ formData.tel }}</p>
+            </div>
+        </div>
+    </div>
+</div>

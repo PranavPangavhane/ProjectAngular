@@ -1,0 +1,79 @@
+<div class="registration-container">
+  <button mat-button class="close-button" (click)="closeDialog()">Close</button>
+  <div class="avatar-section">
+    <img [src]="photoUrl ? photoUrl : 'https://www.pngitem.com/pimgs/m/581-5813504_avatar-dummy-png-transparent-png.png'" alt="Avatar" class="avatar-image" (click)="selectPhoto()">
+    <button type="button" class="upload-button" (click)="selectPhoto()">Upload your photo</button>
+  </div>
+  <div class="photo-section">
+    <input type="file" id="fileInput" (change)="onFileSelected($event)" accept="image/*" style="display: none">
+    <div class="photo-preview" *ngIf="photoUrl">
+   
+    </div>
+  </div>
+  <div class="form-section">
+    <form [formGroup]="registrationForm" class="registration-form">
+      <input type="text" formControlName="firstName" class="input-group" placeholder="First Name">
+      <input type="text" formControlName="lastName" class="input-group" placeholder="Last Name">
+      <input type="email" formControlName="email" class="input-group" placeholder="Email">
+      
+      <br>
+      
+      <input type="number" formControlName="tel" class="input-group" placeholder="Mob Number">
+      
+      <br>
+      
+      <label for="age">Age</label>
+      <input type="range" formControlName="age" min="18" max="100" class="input-group" id="ageSlider">
+      <span id="ageValue">50</span>
+      
+      <br>
+      
+      <label for="state">State</label>
+      <select formControlName="state" id="state" aria-placeholder="State">
+        <option value="state1">State 1</option>
+        <option value="state2">State 2</option>
+        <option value="state3">State 3</option>
+      </select>
+      
+      <br>
+      
+      <label for="country">Country</label>
+      <select formControlName="country" id="country">
+        <option value="" disabled selected>Select country</option>
+        <option value="country1">Country 1</option>
+        <option value="country2">Country 2</option>
+        <option value="country3">Country 3</option>
+      </select>
+      
+      <br>
+      
+      <select formControlName="addressType">
+        <option value="Home">Home</option>
+        <option value="Company">Company</option>
+      </select>
+      
+      <div *ngIf="registrationForm.get('addressType')?.value === 'Home'">
+        <input type="text" formControlName="address1" class="input-group" placeholder="Address 1">
+        <input type="text" formControlName="address2" class="input-group" placeholder="Address 2">
+      </div>
+      
+      <div *ngIf="registrationForm.get('addressType')?.value === 'Company'">
+        <input type="text" formControlName="companyAddress1" class="input-group" placeholder="Company Address 1">
+        <input type="text" formControlName="companyAddress2" class="input-group" placeholder="Company Address 2">
+      </div>
+
+      <label for="interest"></label>
+
+      <div class="tags">
+        <span class="tag" *ngFor="let tag of tags">
+          {{ tag }}
+          <span class="close" (click)="removeTag(tag)">x</span>
+        </span>
+      </div>
+      
+      <input type="text" class="input-group" placeholder="Type your interest" [formControl]="interestControl" (keydown.enter)="addTag()">
+      
+      <button type="button" class="button-group" (click)="onSubmit()">Submit</button>
+    </form>
+  </div>
+</div>

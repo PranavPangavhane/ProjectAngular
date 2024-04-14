@@ -1,0 +1,36 @@
+<!-- Navigation Bar Component -->
+<nav class="navbar">
+  <div class="logo">DEMO APP</div>
+  <ul class="menu">
+      <li><b><a href="">HOME</a></b></li>
+      <li><b><a href="#">ABOUT US</a></b></li>
+      <li><b><a href="#">JOBS</a></b></li>
+      <li><b><a href="#">CLIENTS</a></b></li>
+      <li><b><a href="#">EMPLOYERS</a></b></li>
+      <li><b><a href="#">CONTACT US</a></b></li>
+  </ul>
+</nav>
+
+
+<div class="main-content">
+  
+  <div class="blur"></div> 
+  <h1 class="heading">I'm looking for...</h1>
+  <div class="search-bar">
+    <input type="text" class="form-control" placeholder="Enter a Job Description">
+    <select class="form-select">
+      <option>Select your location</option>
+      
+    </select>
+    <button class="btn btn-primary">Search</button>
+  </div>
+  <div class="job-types">
+      <button>Full Time</button>
+      <button>Part Time/Casual</button>
+      <button>Freelance</button>
+      <br>
+      
+  </div>
+  <button class="registration" (click)="openRegistrationForm()">Register</button>
+  <router-outlet></router-outlet>
+</div>

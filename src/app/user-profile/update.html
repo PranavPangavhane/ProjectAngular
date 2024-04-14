@@ -1,0 +1,26 @@
+<div class="user-profile-container black-text">
+    <h2>User Profile</h2>
+    <div *ngIf="formData" class="profile-wrapper">
+        <div class="profile-left">
+            <div class="avatar-section">
+                <img [src]="formData.photo" alt="Avatar" class="avatar-image bordered">
+            </div>
+            <div class="buttons">
+                <button mat-button class="edit-profile-button" (click)="editProfile()">Edit Profile</button>
+                <button mat-button class="edit-photo-button">Edit Photo</button>
+                <button mat-button class="submit-changes-button" (click)="submitChanges()">Submit Changes</button> <!-- New button for submitting changes -->
+            </div>
+        </div>
+        <div class="profile-right">
+            <div class="user-details">
+                <!-- Bind form controls to input fields -->
+                <input type="text" formControlName="firstName" [disabled]="profileForm.disabled">
+                <input type="text" formControlName="lastName" [disabled]="profileForm.disabled">
+                <input type="number" formControlName="age" [disabled]="profileForm.disabled">
+                <input type="email" formControlName="email" [disabled]="profileForm.disabled">
+                <input type="text" formControlName="state" [disabled]="profileForm.disabled">
+                <!-- Add other input fields based on your data structure -->
+            </div>
+        </div>
+    </div>
+</div>

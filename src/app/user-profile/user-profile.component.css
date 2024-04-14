@@ -1,0 +1,125 @@
+
+
+.user-profile-wrapper {
+    display: flex;
+    justify-content:center; /* Center the child horizontally */
+    align-items: center; /* Center the child vertically */
+    height: 100%; /* Set the height to 100% of the viewport height */
+}
+.user-profile-container {
+    background-color: rgba(239, 239, 239, 0.1);
+    padding: 40px; 
+    border-radius: 20px; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); 
+    width: 80%; 
+    max-width: 800px; 
+  
+   height: 80%;
+}
+
+.user-profile-container .user-details p {
+    margin-bottom: 10px; 
+}
+
+.user-profile-container .avatar-section {
+    float: left; 
+    margin-right: 20px; 
+}
+
+.user-profile-container .avatar-image {
+    width: 100px;
+    height: auto; 
+    border-radius: 50%; 
+}
+
+.profile-content {
+    display: flex;
+}
+
+.avatar-section {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.avatar-image {
+    width: 150px; 
+    height: 150px; 
+    border-radius: 50%; 
+}
+
+.user-details {
+    flex: 3;
+}
+
+.user-details p {
+    margin-bottom: 10px;
+}
+
+.user-details ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.user-details ul li {
+    margin-bottom: 5px;
+}
+
+.black-text {
+    color: black;
+    font-size: large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.avatar-image.bordered {
+    border: 2px solid black; 
+}
+
+.profile-wrapper {
+    display: flex;
+    align-items: flex-start;
+}
+
+.profile-left {
+    margin-right: 20px; 
+}
+
+.buttons {
+    margin-top: 10px; 
+}
+
+.edit-profile-button {
+    margin-right: 10px; 
+}
+/* Custom CSS styles for the buttons */
+.edit-profile-button,
+.edit-photo-button {
+    background-color: #1b22e8; 
+    border: none;
+    color: white;
+    padding: 10px 20px; 
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 8px;
+    outline: none; 
+}
+
+
+.edit-profile-button:hover,
+.edit-photo-button:hover {
+    background-color: #1b1c1b; 
+}
+
+.edit-profile-button:active,
+.edit-photo-button:active {
+    background-color: #3e8e41; /* Dark green */
+}
+.user-profile-container .user-details p,
+.user-profile-container .user-details ul li {
+    font-family: 'Arial', sans-serif; 
+    font-size: 20px;
+}
+
